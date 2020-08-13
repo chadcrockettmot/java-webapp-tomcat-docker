@@ -30,3 +30,12 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+
+# environment
+config.properties
+.classpath
+.project
+.settings/
+.idea/
+target/
+*.iml
