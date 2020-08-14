@@ -1,6 +1,11 @@
 pipeline {
 	agent any
 	stages {
+	    stage('mvn build'){
+	        steps {
+	            sh 'mvn clean install package'
+	        }
+	    }
 	    stage('Docker image build'){
 	        steps {
 	            sh 'docker build -t travelblog .'
