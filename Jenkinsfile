@@ -11,9 +11,14 @@ pipeline {
 	            sh 'docker build -t travelblog .'
 	        }
 	    }
+	    stage('Remove running Container'){
+	        steps {
+	            sh 'docker rm -f tbcontainer'
+	        }
+	    }
 	    stage('Run Docker Container'){
 	        steps{
-	            sh 'docker container run --rm --name tbcontainer -p 8000:8080 -d travelblog'
+	            sh 'docker container run --name tbcontainer -p 8000:8080 -d travelblog'
 	        }
 	    }
 	}
