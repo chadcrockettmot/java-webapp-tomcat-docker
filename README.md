@@ -14,6 +14,10 @@ Deploy a Java web application to tomcat running inside a docker using the Jenkin
 
 * [Install Docker](https://docs.docker.com/engine/install/ubuntu/) 
 
+### Install Java JDK 8 on Windows, Mac or Ubuntu:
+
+* [Documentation by https://www.ntu.edu.sg/](https://www.ntu.edu.sg/home/ehchua/programming/howto/JDK_HowTo.html)
+
 ### Install Maven:
 
 * `sudo apt-get install maven -y`
