@@ -18,9 +18,19 @@ Deploy a Java web application to tomcat running inside a docker using the Jenkin
 
 * [Documentation by https://www.ntu.edu.sg/](https://www.ntu.edu.sg/home/ehchua/programming/howto/JDK_HowTo.html)
 
-### Install Maven:
+### Use Maven Wrapper for unix and windows:
 
-* `sudo apt-get install maven -y`
+* Unix - `./mvnw`
+* Windows - `./mvnw.cmd`
+
+### Or 
+
+### Install Maven: (In this demo, I installed Maven)
+
+* Ubuntu - `sudo apt-get install maven -y`
+* Windows - [Documentation by https://maven.apache.org/](https://maven.apache.org/install.html)
+
+## To Deploy through Jenkins(CI/CD):
 
 ### Install Jenkins:
 
@@ -52,3 +62,21 @@ Like this - Got permission denied while trying to connect to the Docker daemon s
 * Add the docker group if it doesn't already exist: `sudo groupadd docker`
 * Add the user "jenkins" to the docker group: `sudo usermod -a -G docker jenkins`
 * Then restart Jenkins: `sudo service jenkins restart`
+
+## To deploy manually inside Docker without Jenkins:
+
+* mvn build - `mvn clean install package`
+* Docker image build - `docker build -t travelblog .`
+* Remove any running Container - `./stop-container.sh`
+* Run Docker Container - `docker container run --name tbcontainer -p 8000:8080 -d travelblog`
+
+## To just run the Java Web-Application in Tomcat:
+
+* mvn build - `mvn clean install package`
+* Find out where your tomcat is located.
+* Copy your war file into TOMCAT_HOME/webapps - `target/travelblog-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/`
+* Start Tomcat - TOMCAT_HOME/bin/startup.sh
+
+## In Webpage:
+
+* Paste the IP and append “/travelblog” on the end in the browser.
