@@ -23,7 +23,7 @@ Deploy a Java web application to tomcat running inside a docker using the Jenkin
 * Unix - `./mvnw`
 * Windows - `./mvnw.cmd`
 
-### Or 
+### or 
 
 ### Install Maven: (In this demo, I installed Maven)
 
@@ -32,7 +32,7 @@ Deploy a Java web application to tomcat running inside a docker using the Jenkin
 
 ## To Deploy through Jenkins(CI/CD):
 
-### Install Jenkins: or [Refer Documentation](https://pkg.jenkins.io/debian-stable/)
+### Install Jenkins on [Ubuntu](https://pkg.jenkins.io/debian-stable/): or [Refer Documentation for others](https://www.jenkins.io/download/)
 
 * `wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -`
 * `sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ >> /etc/apt/sources.list'`
