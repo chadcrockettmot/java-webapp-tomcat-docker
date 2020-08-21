@@ -18,14 +18,7 @@ Deploy a Java web application to tomcat running inside a docker using the Jenkin
 
 * [Documentation by https://www.ntu.edu.sg/](https://www.ntu.edu.sg/home/ehchua/programming/howto/JDK_HowTo.html)
 
-### Use Maven Wrapper for unix and windows:
-
-* Unix - `./mvnw`
-* Windows - `./mvnw.cmd`
-
-### or 
-
-### Install Maven: (In this demo, I installed Maven)
+### Install Maven:
 
 * Ubuntu - `sudo apt-get install maven -y`
 * Windows - [Documentation by https://maven.apache.org/](https://maven.apache.org/install.html)
